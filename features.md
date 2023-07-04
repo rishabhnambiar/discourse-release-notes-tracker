@@ -1,3 +1,24 @@
+### Todo
+[ ] 5 major new features
+[ ] 5 minor new features
+
+[ ] From here, trawl through each release and cherry pick 5 major new features and 5 minor new features: look closely at the release notes tag as well, which is in the announcements category.
+
+[ ] You WILL need to take NEW screenshots, as features tend to evolve over time in the release. So do NOT rely on the screenshots in the old release notes topics, please.
+
+[ ] We used to do feature videos as well, but it became too much work and nobody could get to it. I’m not opposed to this, but I think for most features a screenshot really suffices, and a video (or animated GIF) is mostly overkill. But if you wanna be an overachiever, go for it! :wink:
+
+Scanning through the list, I like to focus on
+
+    Changes that have a large impact on the user interface of Discourse.
+
+    Changes that average users can see (versus something only an admin or staff or TL4 user would see)
+
+    Changes that were asked for many times (rule of :three: or ideally :three::zero::zero:)
+
+Stuff that’s highly technical, or only visible to developers / admins, tends to get pushed into “read the detailed release notes”.
+
+
 ### Features that can be highlighted
 
 #### Threads
