@@ -1,0 +1,1053 @@
+rake "release_note:generate[17daf07,HEAD]"
+### New Features
+
+- Allow user to override watched_precedence_over_muted setting
+- Use rich user status tooltip everywhere
+- Allows to enable/disable threading in UI
+- Track last_viewed_at datetime for channel members
+- Show available interpolation keys when overriding translations
+- Sort thread list by unread threads first
+- Conditionally change back button route for thread
+- New watched_precedence_over_muted setting
+- Try to load plugin gems platform variants
+- Show first notification tip to all users
+- Add hooks for email poller plugins
+- Display commit hash for each plugin on `/admin/plugins` page.
+- Add dropdown to filter by selected in edit nav menu modal
+- Split navigation preference for count and behavior of sidebar links
+- Add db:resize:notification_id task for growing table
+- Export chat messages to CSV file
+- Add deslect all and reset to defaults btn edit nav menu modal
+- Add input filter for editing tags in navigation menu modal
+- Add modal for editing tags in navigation menu
+- Scroll to first message when clicking date in chat
+- Enable image grid by default
+- Allow users to manually track threads without replying
+- Thread indicator improvements and participants
+- Implement max_tags_per_email_subject
+- Custom content summarization strategies.
+- Dynamic chunk size with uppy
+- Add new site setting type for tag-group lists
+- Add Mailpace webhook
+- Support sub-subcategories in new edit sidebar categories modal
+- Image grid in posts (experimental)
+- Use new hashtag autocomplete system on all sites
+- New dismiss button for combined new and unread view
+- Allow S3 ACLs to be disabled
+- Offline indicator
+- Add API Scope for latest posts
+- API Scope for latest.rss feed
+- Allow expanding hidden posts for groups in SiteSetting.can_see_hidden_post
+- Serve RTL versions of admin and plugins CSS bundles for RTL locales
+- Reduce avatar sizes to 6 from 20
+- Display PM participant group names in the topics list.
+- Chat thread header indicator improvements
+- Improving thread list item and header
+- Modal for admins to edit Community section
+- Support for chronologically merging posts into existing topic
+- Initial chat thread unread indicators
+- Apply hashtag styles to autocomplete
+- Create legal topics for set company name
+- Add support for AVIF images
+- Add user status to inline mentions in chat
+- Allow searching for oldest topics
+- Fuzzy search in site settings and raise limit to 100 matches
+- Show user cards for inactive users
+- Create and update thread memberships
+- Chat-replying indicator for threads
+- Default to subcategory when parent category does not allow posting
+- Thread list initial UI
+- Enable user tips by default
+- Allow for longer membership domains
+- Add new notification for admin problems
+- Search_rank_sort_priorities modifier
+- Offline indicator controlled by message-bus connectivity (#21324)"
+- Offline indicator controlled by message-bus connectivity
+- Reimplement offline indicator 
+- Service to track message bus connectivity + offline indicator(#21259)
+- Add support for figure and figcaption tags in embeddings
+- Add support for user badge revocation webhook events
+- Reintroduce better thread reply counter cache
+- Allow admins to delete reviewables via API
+- Add new don't feed the trolls feature
+- Allow drafts to be deleted via the API
+- Detect current git "branch" even when a tag is checked out
+- Better thread reply counter cache
+- Hook up chat bulk delete for threads
+- Add a setting to allowlist DiscourseConnect return path domains
+- Reacting to MessageBus in chat thread panel
+- Add an emoji deny list site setting
+- Initial chat thread indicator and disabling echo mode in channels
+- Increase pbkdf2 iterations to 600k
+- Persist password hashing algorithm/params in database
+- Add category name in articleSection meta tag for schema.
+- Public custom sidebar sections visible to anonymous
+- SiteSetting for creation of small action on tag change
+- Add CSS class generation for category colors and hashtags
+- Allow invite only and Discourse connect
+- SiteSetting to default user path to different routes
+- Use "Comment" schema type for post replies.
+- Experimental API for custom full-page search types.
+- Ability to bulk_remove users from a group
+- Modifier API for plugins
+- Move bootstrap mode indicator to header
+- Allow site owners to disable impersonation
+- Mark all chat channels read with a shortcut
+- Auto-remove users without permission from channel
+- Log manual bounce reset
+- Ability to reorder links in custom sidebar sections
+- Hook for suggested topic customization
+- Only list watching group messages in messages notifications panel
+- Configurable auto-bump cooldown
+- Tooltip for disabled new topic button
+- Add new tags from edit tag synonyms page
+- Allow external links in custom sidebar sections
+- Chat header icon indicator preference
+- Log to STDOUT using Rails 5 env var
+- Update topic/comment embedding parameters
+- Add API scope for listing topics in a category
+- Adding some more api scopes
+- Add API scopes for group endpoints
+- Add word count and indicator when exceeded max
+- Roll out new search optimisations
+- Use feature detection for showing push notification in iOS
+- Chat side panel with threads initial skeleton
+- Add shortcut to insert current time in composer
+- Create SQL-only backup if there are no uploads
+- Automatically create chat threads in background
+- Support collapsing array sections in JSON Schema field types
+- Allow embedded view to include a header
+- Allow DTooltip interaction
+- Inline audio player for chat uploads
+- Resizeable chat drawer
+- Use similarity in user search
+- Prioritize_exact_search_title_match hidden setting
+- Allow restricting duplication in search index
+- Enable service worker for Apple devices
+- Move metadata user results to list bottom
+- Hidden site setting to disable search prefix matching
+- Allow editing channel slug
+- Rate limit anon searches per second
+- Add separate api scope for topic status
+- Add api scope for suspending users
+- Add api scope for create invite endpoint
+- Add api scope for search endpoint
+- Add better TikTok onebox support
+- Allow changing slug on create channel
+- Setting which allows TL4 users to deleted posts
+- Allow admins to permanently delete revisions
+- Introduce pg_force_readonly_mode GlobalSetting
+- Add `in:polls` filter to search
+- Add rake task to mark old hashtag format for rebake
+- Allow TL4 users to see unlisted topics
+- Verify email webhook signatures
+- Extend topic update API scope to allow status updates
+- Raise redirect avatar cache to 1 day
+- Add basic instrumentation to defer queue
+- Show more context in Discourse topic oneboxes
+- Allow group owners promote more owners
+
+### Bug Fixes
+
+- Minor Twitter onebox improvements
+- Correctly intercept ``<a href target="_self"`
+- Allow to use `%h%m%s` for youtube `t` param
+- Improve performance of post alerter job
+- Tags in tag groups not shown in edit nav menu tags modal
+- Preload fonts before rerendering wizard style canvas
+- ActiveModel::Types :array load error in production
+- Revert uppy aws-s3 upgrade
+- Do not follow redirects for twitter oneboxes
+- Consistent sidebar section external links
+- Fix normalize_raw method for nil inputs in migration scripts
+- DateTimeInputRange should show correct intervals with @relativeDate param
+- A mobile header regression in 9cc2b5c
+- Error when CategoryList tried to find relevant topics
+- Chat threads N1
+- Set `Jobs::BackfillSidebarSiteSettings` cluster concurrency to 1
+- Nest theme translation data so it saves
+- Cater for polls that can have multiple votes per user
+- Hide "Save Draft" button when editing post on same topic.
+- Abort transition when `transition.from` present on new-topic route
+- Render plugin's commit URL correctly and open in new window.
+- Show tag chooser in composer for PM on mobile
+- Longer touch for active message
+- Sidebar dot color when chat is off
+- Attempt to reconnect to server when browser visibilty changes
+- Use Twitter API v2 for oneboxes and restore OpenGraph fallback
+- Force ordering to make things more consistent and fix flaky test
+- Staged user creation loses user custom field data
+- Site's top tags not shown for anonymous user
+- Update unread and new count for categories
+- 'in all topics' should search in all topics
+- Don't error when clicking on a custom link in community section
+- Add aria-label attribute to cooked hashtags
+- Make the arrow and tooltip background the same color
+- Theme translations resetting on save
+- Don't add "Re:" prefix in email subject for first post of group PMs.
+- Broken group messages inboxes when group name is mixed case
+- Small bug with topics and my posts translations
+- Incompatibility between default_composer_category and default_subcategory_on_read_only_category
+- Restore behavior of `window.Discourse`
+- Correctly sets and uses has-reply class
+- Css class was incorrect
+- Various mobile chat improvements
+- Direct message channels can be flagged
+- Allows selection of messages in threads
+- Minor thread indicator issue
+- De-duplicate poll vote on user merge
+- Rename everything link to topics
+- Update sidebar to be navigation menu
+- Moderator(non-admin staff user) group visibility scope queries
+- Don't add the no-text class if translatedLabel is present
+- Correctly get the topic_id from the first post
+- Update workbox class references following version bump
+- Allow half-merged user to be accessed in admin UI
+- Backfill chat thread memberships
+- Change dismiss new button label
+- Use `_presentChannels.size` instead of `_presentChannels.length`
+- TOC anchors in a subfolder setup
+- Scroll top after chat activation
+- Various mobile optimizations
+- Make serialized watched word regex Javascript compatible
+- Correctly re-conciliate message bus backlog
+- Prevents long press to hijack reaction event
+- Json_schemer no longer allows nil keys
+- Create new PM notifications for `watching_first_post` groups
+- Disables pointer events while showing menu
+- Prevents lightbox to close chat on escape
+- On iOS PWA prevents touch to click
+- Prevents back history loop
+- Do not allow blank chat messages
+- Pasting files into chat was not working
+- Correctly set value on textarea interactor
+- Send TL2 promotion message to correct user
+- Add category colors back to categories pages
+- Add removed image that may still be used
+- Non-Interfering Backdrop Clicks
+- Apply chat header icon indicator style to urgent only
+- Use a default hashtag icon color for user with no permission
+- Toggle topic pinning for user only if thumbtack icon is pressed.
+- Restore sidebar footer background
+- Attempts to exit lock-on early
+- Hide delete button to invite as user are unable to delete anyway
+- Simplify review community section link
+- Prevent undefined on isSafari capabilities test
+- Ensure mention autocomplete box doesn't go off-screen in RTL locales
+- Correctly set last message bus ids on resync
+- Delete synonym tags if other synonyms are already exist.
+- Change Community icons
+- Use fixed dimensions for user card avatar
+- Correctly resubscribe after restart
+- Do not add mentioned groups as mentioned users
+- Prevents admins to be silenced
+- Elements floating away on overscroll in Safari
+- Uses DiscourseURL.routeTo for drawer transitions
+- Applies getURL on both app and chat URLs
+- Correctly uses getURL to open full page
+- Remove unneeded RTL-specific CSS rules
+- Removes destroyed mentioned used
+- Recover by showing drawer index on 404
+- `u/:username/deleted-posts` route regression
+- Call composer reset with correct params
+- Show Privacy Policy or ToS when they exist
+- Page size edge case for null last_read_message_id
+- Create original message user thread membership
+- Auto fill was not happening on first load
+- Ensures chat-thread is not overflowing
+- Move thread storage out of chatApi.thread() call
+- N+1 query for chat message serializer on mentions
+- Hashtag CSS class color specificity
+- Do not attempt to mark as read a staged message
+- Chat deleted last read message and tracking state issues
+- Include more_topic_url in the response to /categories_and_{latest, top}
+- Serialize thread membership for user
+- Prevents saving draft in incorrect channel
+- Correctly nullifies active message
+- Flakey spec in sidebar with new font size
+- Don’t run validations when invalidating invites
+- Improves draft for channels
+- Do not preview chat channels to read-only users
+- Skip iframe URLs with relative paths in pretty text sanitizer.
+- Do not error if admin/owner checks target message
+- Improve chat membership update on deleted message
+- Allow published pages to be added to sidebar
+- Removing arbitrary limit in a Discuz importer script query
+- Ensure sidepanel size is correctly applied when showing
+- Update client lastReadMessageId on trashed message
+- Keeps panel size when changing content
+- Video thumbnails can have duplicates
+- Cancel fetching messages after channel change
+- Page size check for thread messages
+- Consider users.created_at for inactive cleanup
+- Do not cook icon with hashtags
+- Allow admin to change topic notification level via API
+- Consider users with trashed topics/posts for inactive cleanup
+- Correct replying indicator padding
+- Anonymizing a user clears their user status too
+- Fix for Default to subcategory when parent category does not allow posting
+- Improve mailman email parsing
+- Clicking on edited notification should open edit history modal
+- Adds missing margin on desktop draft message
+- Ensures message has been added before scroll
+- Update category tag stats with new or deleted
+- Show gif upload size limit error straight away
+- Prevent Email Processor errors when mail is blank or nil
+- Various fixes to chat styleguide
+- More resilient bottom of message check
+- Ensures replying indicator has limited height
+- Ensures chat composer docks to topic composer
+- Remove obsolete references to lounge category
+- Searching for svg sprite icons connecting to default database
+- Clear topic list cache after archiving a PM
+- Compensate for lack of replying indicator on draft
+- Sync channel tracking state properly on presence change
+- Followups to composer notch adjustments
+- Allows notch to have composer bg color
+- Show scrollbars under firefox in chat
+- Don't show duplicates in styleguide
+- Drawer styles for chat thread icon
+- Add new chat threads icon and move thread list button to right
+- Ensure modal alert is hidden when empty
+- Hide d-modal during page load
+- Miscellaneous tagging errors
+- Chat height fixes
+- Hides global notice on chat
+- Moves chat height computation to a mixin
+- Various fixes following channel height changes
+- Limits max height to viewport on channel only
+- Handle all UTF-8 characters
+- Sidebar custom sections rendering perf degrades over time
+- AddNavigationBarItem api example
+- Composer should be sending metaData
+- Do not set VH while zooming
+- Always listen on window resize
+- Refresh site when enable_user_tips changes
+- Ensures `all_mentioned_user_ids` is not used as identifier
+- Thread reply indicator overflow
+- Incorrect `PLUGIN_NAME` for "poll"
+- Avoid double-encoding featured topic title in user profile
+- Prevents subscribing with an old id
+- Close panel earlier
+- Allow integer group_ids for create invite api
+- Messages selection with shift + click
+- Keyboard on android
+- Rely only on one keyboard computation solution
+- Chat NotificationLevels extension breaking in prod
+- Excerpt overflow and children click events
+- Handle deleted original message for thread index
+- Don't autojoin users when they have ready-only permissions 
+- Show 404 on new category page for moderators when Site Setting disabled
+- Fallback to composer for non ascii characters
+- Do not allow title stuffing to dominate search
+- Prevents fast channel switching to cause an error
+- Minor thread changes on mobile
+- Create invite api docs
+- Likes received count in digest email
+- Service worker for Safari
+- More precise chat-replying-indicator
+- Fast-edit should fall back to composer for non-ascii characters
+- Change the limit on badges description
+- No event when threading is disabled
+- Makes mouse events passive
+- Ensure order when moving chat messages to another channel
+- Correct link on original message
+- Attempts to reconciliate tracking state
+- Jumpy more sidebar section
+- Update test limit for email domain
+- Flaky sidebar-user-community-section-test
+- Resolve timezone issues with date-time-input
+- Service worker should cache only 200 requests
+- Incorrect unread count shown in channel when message deleted
+- Thread mention read state and notification links
+- Remove double escaped Vimeo titles
+- Ensure expand table works regardless of click event target
+- Do not log 'personal message view' when sending webhook
+- Allow re-flagging of ninja-edited posts
+- Blank user messages inbox dropdown on subfolder setup.
+- More resilient dates separators computation
+- Ensure user admin button is present on mobile
+- Email receiver should ignore x-auto-response-suppress
+- Add thumbnails for Vimeo unlisted lazy videos
+- Ensures page height is correct on ipad + hub
+- ChatComposerMessageDetails icon was always edit
+- Disables send btn while uploads in progress
+- Correctly use types for reviewables type
+- Quoted images should be lightboxed
+- Disallow invisible Unicode characters in usernames
+- Rename notify_about_flags_after to notify_about_reviewable_item_after
+- Empty video thumbnails
+- Correctly differentiates channel/thread upload inputs
+- Allows youtube embeds to respect the `t` param
+- Correctly homogenizes panels min width
+- Chat height was incorrect on ipad
+- Include group flair in homepage category topic lists
+- Ensure group-filtered group user event webhooks fire
+- Ensures thread is cleared when closing it
+- Cancels saving draft when composer is destroyed
+- Correct border color of message actions
+- Show large image placeholder for image onebox
+- Improve chat route cleanup
+- Properly respects chat_minimum_message_length
+- Attempts to make cooking less order dependent
+- Generates markdown from pasting link
+- Require date db_timestamps_mover script
+- Safely return from missing post on `check_dont_feed_the_trolls`
+- Safeguard in case the message is active during transition
+- Allows composer to expand
+- Bbcode URLs not handling paths correctly
+- Don't display destroy reviewable button on client
+- Show auto-group flair according to user preferences
+- Blank video thumbnails
+- Ensure skip-module JS is transpiled correctly
+- Ensure reviewable counts are updated correctly for new user menu
+- Error when trying to bump a topic with no category
+- Do not delete old chat messages if chat disabled
+- Include liked_consolidated and reaction types in the likes tab unread count
+- Do not overwrite existing thumbnails
+- Better detect text selection in search input
+- Increase reorder sidebar delay for desktop
+- Don't render error for bad-sequence
+- Send notifications after a chat message was updated with new mentions
+- Chat publisher publishing to thread when threading disabled
+- Revert "DEV: Add `overflow-x: hidden` to chat message containers (#21030)"
+- Hashtag subcategory ref incorrect when not highest-ranked type
+- Resetting user directory columns
+- Quote button doesn't press on mobile
+- Chat composer shortcuts should respect context
+- Do not count thread messages for channel unreads
+- 500 error when adding restricted category tags
+- Nil exception in chat notifier
+- Add missing translations strings for lazy-videos
+- Apply clear-transition class to correct wrapper for chat drawer
+- Dismiss modal when "Keep Editing" is used
+- Error when quoting message into topic
+- Render links with subfolders properly in Discobot
+- Composer collapse position while uploading
+- Overflow of channel title in preview card
+- Ensures tag notification level is changed
+- Do not serialize thread data if threading disabled
+- Prevents exception when publishing processed
+- Prevents exception if thread is not found
+- Decrease reorder sidebar delay for desktop
+- Relies on native focus behavior in chat emoji picker
+- Educational composer messages regressed in 788dc0a
+- All staff_counters should be pluralized strings
+- Don’t assume post is available in UserEmail job
+- Incorrect message inbox displayed due to username case sensitivity
+- Multiple channels marked active in sidebar
+- Improve performance of UserStat.ensure_consistency
+- Use string for postgres recently readonly DistributedCache
+- Make emoji cache store marshalled objects
+- Staff_counters should be pluralized strings
+- Ensures activeMessage is reset with channel
+- Resize chat collapser when using small width drawer
+- Ensures message actions are bounded
+- Shows a message as hovered when hovering actions
+- Correctly show user info
+- Scroll when clicking first emoji of section
+- Cancel editing should clear the composer
+- Do not display the message content when it errors
+- Correct backdrop on mobile for the emoji picker
+- Correctly pre-select first option in bookmark notification drop-down
+- Accounts for `hide_profile_and_presence` core user option
+- Handle errors when we show the edit user directory columns modal
+- Show better default error when failing to delete all user posts
+- ``<QuoteButton/>`` shifts when content is added to header
+- PhpBB3 importer created invalid quote for posts
+- Error in CSS generation for anon on login_required
+- Public sidebar sections belong to system user
+- Show correct status for user reviewables
+- Icon toggles saerch menu display on click
+- Use correct translation key
+- Add lazy-videos support for Vimeo unlisted videos
+- Trashing message should reset last read
+- Vertically center youtube thumbnails in lazy-videos
+- Drop internal URL validation for paths in sidebar
+- Prevent errors from uppy performance logging
+- Use unselectable mixin in sidebar drag and drop
+- Pretty-text shims - getURL's baseUri
+- Do not validate email in TL promotion
+- Ensures removing a reaction doesn’t remove others
+- Disable text select on sidebar
+- Reorder custom sidebar links on touch screen
+- Push notification delay should not be longer than specified
+- Skip category preference update if already set by group.
+- Channel_message_bus_last_id was incorrect
+- Make chat tracking payload backwards compatible
+- Global sidebar section icon not moving on scroll
+- Admin always see configure default sidebar categories
+- Display validation under custom sidebar fields
+- Broken `?status=(listed|unlisted)` query param support
+- Check for staff without triggering anonymous user error
+- Post height issues with Expand Table button
+- Make sure marking channels read propagates to all tabs
+- Use correct validation method name for `default_categories_normal`.
+- Delay custom section reorder
+- ACL for OptimizedImage was using wrong path on multisite
+- Relies only on message bus to set tracking state
+- Make sure "last visit" is not shown after marking all messages read
+- Missing translation for 'reset_bounce_score' staff action log
+- Do not allow anonymous users to be anonymized
+- Disable reorder links on touch screens
+- Do not refresh metadata of not followed channel
+- Fix the emoji toned regexes
+- Ensures user with multiple tabs see own reactions
+- My links in sidebar section
+- Badge granting recursion error
+- Replace unitless 0 in CSS calc() with '0px'
+- Support tag query param on `/tag/{name}` routes
+- Do not show user tips over composer
+- Avoid double-encoding featured topic title in user card
+- Error for admin-panel incoming email logs
+- Correctly checks for chat enabled in incoming webhooks controller
+- MaxMindDB download failures caused a crash on rebuild
+- Search index failing on certain posts
+- Ensures updateLastRead is called when receiving a message
+- An ember build is required to run the system tests
+- Ensures lightbox is working after collapse/expand
+- Correctly infer polymorphic class from bookmarkable type
+- Escaped mentions in chat excerpts
+- Do not send emails when channel-wide mentions are disabled in a channel
+- Latest post created_at on topic-timeline not updating
+- Update LoadMore selector for user tables
+- `default_list_filter = none` navigation and preloading
+- TopicQuery for NULL `category.topic_id`
+- Broken topic-timeline summarize topic button
+- Anonymous users cannot load topics with mentions with a user status that has an end date
+- Avatar upload error
+- Welcome topic banner showing after general category is deleted
+- Ensures edited message is correctly re-decorated
+- More consistent scroll to bottom
+- Tag dropdown not working with default_list_filter
+- Ensure `form_template_ids` is defined on new category records
+- Improves unread state precision
+- Review q issues
+- Don't send image sizes for emojis/avatars
+- Ensure `required_tag_group` is defined on new category records
+- Uploading multiple files to chat could cause canellations
+- UploadReference order by tiebreaker for UploadSecurity
+- Set external flag before validation
+- Broken sticky date on firefox
+- More precise unread message detection
+- Correctly syncs current user message in multiple sessions
+- Display a proper error when user already exists and email addresses are hidden.
+- Don’t email suspended users from group PM
+- Do not show infinite loading state on draft with new users
+- Class for section link when name has space
+- Anonymous FAQ link to external URL
+- Handle null values in category settings relative time pickers
+- Trim whitespace on email field for invites
+- Prevents mouseover to gain focus on sk row
+- Deleting security keys was not working
+- Do not refresh when accessing loaded reply
+- Use the default value correctly for theme settings of type uploads
+- Leaking callbacks to synchronize state
+- Incorrect topic tracking state count when a new category is created
+- The default inbox label if username is not all lower cased in the url
+- Prevents duplicate reactions
+- Prevents exception on required login sites with chat
+- \#present ->` #presence typo in TopicRetriever
+- No small action created when a non-author removes itself from a PM
+- Allow floats for zoom level in Google Maps onebox
+- Don't set `categoryId` on PM drafts
+- Recalculating trust levels was not working
+- Only show approved users in search_user results when site setting enabled
+- Mark posted as true for post authors in the TopicUser table during ensure_consistency task
+- Copy & Fullscreen button edits in codeblocks
+- Autocomplete failing for :(
+- Do not escape slash for category text description
+- Correct issues in admin-embeddable-host
+- Correct issues in admin-styles-editor (#20435)
+- Use category description for sidebar link title
+- Correct issues in admin-theme-editor
+- Make sure regular users can delete their PMs
+- Fast edit doesn’t work on content with certain characters
+- Blank dialog when auto-join selected in channel creation modal
+- Text selection breaking with hashtag SVG in Firefox
+- Override navigation menu to "legacy" via query param not working
+- Add support for Europe/Kyiv timezone
+- Allow changing default DNS query timeout of 2s via GlobalSetting
+- Wrong interpolation key
+- Do not enqueue update_post_uploads_secure_status unnecessarily
+- Glimmer component arg access
+- Correctly update _subscribedTo* props
+- Allow HTML in category read-only dialog
+- Correctly add user info data to message serializer
+- Chat member user card rendered out of view
+- Removes uneeded footer-nav-height subtraction
+- Ensures staged message are set with channel id
+- Correctly account for ipad footer nav height
+- Removes stored scroll position in drawer
+- Unsubscribing via key associated with deleted topic
+- Correct sidebar and chat height on DiscourseHub
+- Don't fallback to original implementation for linkTitle in the custom type
+- Ensures chat-message is recomputed with model 
+- Regression with chat shift+select messages
+- Correctly open channel info
+- Overflowing chat content in main-chat-outlet grid
+- Dominant color not working for 16bit images
+- Reset admin theme controller on modal cancel event
+- Reverts part of thread css
+- Do not notify admins on suppressed categories
+- Edit custom section title
+- Category settings migration failing on '' integer
+- Error anonymous when tl4_delete_posts_and_topics setting
+- Correctly listens to chat notifications
+- Account for cursor drift when completing terms
+- IconPicker option to display only available icons
+- Replace hard-coded string with translation
+- Chat's user autocomplete threw errors
+- Add index to sidebar_section_link
+- Stop youtube autoplay on scrollups
+- Return valid JSON when a post in enqueued
+- Changed classname for YT images
+- Hide add section button
+- Improvements for user custom sections
+- Apply max-height on the outer container
+- Ensures non existing user/group cards are not stuck
+- Redirecting to download backup from S3 could fail
+- Remove action buttons if post has already been reviewed
+- Ensure ColorScheme#resolve falls back to base for missing color
+- Avoid race condition when setting user status
+- Fix dragging in horizontal overflow component
+- Use `/` for start_url in webmanifest on non-subfolder installs
+- Autocomplete showing under keyboard on android
+- Delete associated notifications when trashing chat messages.
+- Allow keyboard navigation when searching emojis in chat
+- Category hashtags weren't always found for sub-sub-categories
+- De-prioritize archived topics
+- Domain searches not working properly for URLs
+- Correctly filters input with pre-filled value
+- Add support for PG 14 and up
+- Back button action and position on glimmer topic timeline
+- Emoji autocomplete “more” button not working in chat
+- Better ordering of similar user search suggestions
+- Use `username_lower` in user menu router lookup
+- Extend username updates to self-mentions
+- Sync user's reviewables count when loading reviewables list
+- Search index duplicate parser matching is too restrictive
+- Emoji preview showing incorrect preview on keyboard focus
+- Update flag URL in auto silence PM to moderators
+- Reverts value check when reseting composer value
+- Corrects a regression hiding avatar in user selector
+- Replace R2 gem with rtlcss for generating RTL CSS
+- Allow non-persisted color-scheme colors to be edited
+- Category permission change not creating a log
+- Vimeo iframe url when data-original-href is missing
+- Reword generic site policy defaults
+- Don't spam presence requests when getting 429
+- Error calling LazyYT from chat when disabled
+- Update bookmark topic copy
+- Add support for multiple TikTok aspect ratios
+- Uses popper for cards
+- Preserves avatar size inside onebox
+- Correct various mistakes in chat-notification-manager
+- Truncate existing user status to 100 chars
+- Validate asset url before replacing base url
+- Better UX for timezones selector in date modal
+- Intercept old channel URLs in drawer mode
+- Failing system spec for rate limited search
+- Limit user status to 100 characters
+- Ensure soft-deleted topics can be deleted
+- Fixed getting badges from inviting youself
+- Remove link to site with inappropriate content
+- Use specified limit option in user search
+- Ensure anon-cached values are never returned for API requests
+- Lazy_yt_enabled doesn't affect the engine
+- Delete reviewables associated to posts automatically
+- Text selection breaks opening of links in new tabs
+- Do not add empty use/svg tags in ExcerptParser
+- Skip email if blank while syncing SSO attributes.
+- TL4 user is not redirected to latest when delete topic
+- Do not count deleted post for upload ref security
+- Adds negative skidding to popper offset
+- Data-popper-reference-hidden too broad
+- Fix margin on mini-tag-chooser
+- Prevents msg-actions to show hover text
+- Generates automatic slug for trashed channels
+- TL4 user can see deleted topics
+- Allow modals to scroll on mobile when keyboard is open
+- Don't display staff-only options to non-staff in group member bulk menu
+- Move min tag setting to tags section in edit category
+- Deleted misconfigured embeddable hosts
+- Query UploadReference in UploadSecurity for existing uploads
+- Switch email domain site settings type to host_list
+- Do not override channel name when category selected
+- Enqueue notify_mailing_list_subscribers when post is recovered
+- Change wording from title ->` name in channel about page
+- New hashtag support for narrative bot advanced narrative
+- Restore class-property babel transform for themes
+- Validate tags parameter of TopicQuery
+- Display Discourse onebox tag icon properly in chat
+- Fix incorrect hashtag setting migration
+- Use hashtags in channel archive PMs if available
+- Add migration to reindex invalid indexes
+- Ensure poll extraction is not attempted  if post body is absent
+- Preload user sidebar attrs when `?enable_sidebar=1`
+- Prevent concurrent updates to top_topics
+- Ruby 2 backward compatible plugin logout redirect
+- Fix flaky test resulting from PostAlerter keyword arguments
+- Regression in TopicTrackingState MessageBus message scope.
+- Improve error reporting and failure modes for channel archiving
+
+### UX Changes
+
+- Thread indicator small fixes
+- Visual indicator for reorder sidebar links mode
+- Make template fields fill the container width
+- Use modals to edit categories and tags that appear in sidebar
+- Align chat separators, increase mobile chat width
+- Add max-width to thread indicator
+- Fix position of filters in edit categories/tags nav menu modals
+- Order categories in edit navigation menu modal by name
+- Fix user preference `saved!` position
+- Chat message thread indicator improvements
+- Adding max height to image in chat blockquote
+- Fix overridden setting highlight color
+- Fix edit tags/categories navigation menu modal has no focus on input
+- Adds small delay before making message active
+- Display spinner while loading tags for edit nav menu tags modal
+- Remove horizontal scroll on mobile for edit categories nav modal
+- Remove short topic timeline transition 
+- Fix avatar selector overflow
+- Consistent button hover transitions
+- Improve defaults shown for categories and tags section in sidebar
+- Softer dropdown and menu panel shadows
+- Stack group inbox label horizontally
+- Hide sidebar on invites page
+- Remove branded blobs background
+- Add required indicator to fields with `required` validation
+- Force long filenames to wrap in lightbox
+- Better alignment for experimental grids
+- Remove rounded border on hover lightbox
+- Make user tips more visible
+- Dark color palettes need darker shadows
+- Chat unread indicator refactor
+- Small spacing fix for grid items
+- Minor #mention style adjustments
+- Increase contrast of "more" sidebar dropdown
+- List group label indicator should match existing design
+- Remove 'Create Topics' notice
+- Show tooltip for global nav section icon
+- Correctly adds spacing for selection-management
+- Improves chat message long press and touch
+- Allow users to filter categories in edit sidebar categories modal
+- Don't block render of user messages secondary nav for tracking state
+- First pass at edit categories navigation modal for sidebar
+- Fix number cutoff in header chat indicator
+- Improve /print rate limit description
+- Remove title and description block if blank
+- Remove sidebar background color
+- Fix greyed out add button in chat composer when focussed
+- Correct educate message when there are no new topics
+- Adjust frequent poster size in topic map
+- Chat channel header icons
+- Add show more btn to reviewable item
+- Adjust various avatars due to size changes
+- Style adjustments for sidebar edit modal
+- Followups to #1f37fe5
+- Tweak user deleted posts items
+- Chat composer buttons refactor + emoji
+- Fix post history raw view
+- Deletes a message when editing to blank
+- Add support for flagged chat message in reviewqueue
+- Closes drawer on esc if input is not focused
+- Minor spacing adjustment in message details
+- Drop display of `short_site_description` site settings in sidebar
+- Long unsetyled category names need truncation
+- Minor active state fix for sidebar
+- More style adjustments for larger sidebar font
+- Increase sidebar font-size
+- Add show password on mobile login modal
+- Improve edit history display
+- IPad footer nav now included in header offset
+- Improve tags spacing
+- Chat composer step 2
+- Add indicator for msg from currentUser
+- Add custom section button should not be shown to anon users
+- Tweak on logo size to make sure it's not too small on small screen
+- Remove welcome topic admin tip and tweak copy
+- General chat composer tweaks
+- Minor fix with new composer and reply/edit
+- Improve display of short site description in header dropdown
+- Include custom headers in `--header-offset`
+- Show fast edit at top of window on mobile
+- Add more mass to thread icon
+- Sections not collapsable in "header dropdown" navigation menu
+- Chat composer styling on focus
+- Removes thread margins
+- Implements new composer design
+- Better copy for generic error msg
+- Update copy of badges granted to others
+- Opens side panel early to avoid jitter
+- Hide settings btn when disabled
+- Various improvements to welcome topic CTA
+- Thread panel sizing/spacing on mobile
+- Loading slider for select-kit filter
+- Groups deleted messages
+- Scroll to bottom when message is staged
+- Preloads a thread when hovering thread indicator
+- Implements draft threads
+- Use fixed colors for admin stacked chart reports
+- In sidebar dropdown mode expose 'more' items
+- Fix color scheme setting reset position
+- Fix color preference layout
+- Resets active message when scrolling
+- Two column dropdown sidebar layout
+- Cook message before sending edit
+- Fix user onebox layout
+- Composer use BEM + small tweaks to enabled/disabled styling
+- Add a warning that updating min_trust_level_for_user_api_key will disable users from using DiscourseHub
+- Use dvh for sidebar height
+- Onebox/blockquote/chatreaction slight accent colour change
+- Displays channel title in document title
+- Fix space position in badge counts
+- Minor installation success style adjustments
+- Include subcategories in crawler view
+- Improves composer and thread panel
+- Chat thread hover
+- Better digest centering in event of truncation
+- Fix time pickers input width on mobile
+- Fix kbd tag text's color in the composer full screen prompt
+- Improve layout and styles for solo preferences
+- Update ring animation to avoid scroll
+- Remove new message element from chatpane
+- Slight design changes to chat timestamp
+- Ensures cursor is pointer over custom sections
+- Improve contrast of overridden setting indicator dot
+- Prevent overflow in description
+- Vertical alignment issues on mobile
+- Remove color attribute from ``<kbd>`` tag
+- Prevents letters from being partially cut off on the profile summary page
+- Fix anchor z-index
+- Use dominant color while loading onebox images
+- Various tweaks on thread
+- Enable new notifications menu by default
+- Improve composer control spacing on mobile
+- Chat mobile tweaks
+- Truncate theme toggle text to avoid overflow
+- Remove extra space from emoji in notifications
+- Fix solo preference page layout
+- Do not show bootstrap mode button on mobile
+- Fix spacing between assign tags
+- Use relative units to prevent timeline crop
+- Chat channel title overflow ellipsis fixes
+- Make input on `/filter` route full width
+- More generic draft abandon message
+- Multiple minor improvements
+- Reviewq flagging
+- Update guidance for target DAU/MAU
+- Onebox site icon needs a right margin
+- Improve error message when a topic cannot be moved due to category restrictions
+- Prevents long press on reaction to open actions
+- Add description to apple touch setting
+- Improve login required page
+- Take sticky header into account when spacebar scrolling
+- Improve the "install theme/component" modal on mobile
+- Make table wrapper popup button icon only
+- Show titles on site settings navigation menu items
+- Restore reviewable counts on hamburger for legacy navigation
+- Fix mobile grippie being hidden
+- Allow opening user-menu tabs in new tab/window
+- Styling adjustments for filters page
+- Improve directory user fields on small screens
+- Allow profile menu tabs to scroll if needed
+- Update chat icon to d-chat
+- Clarify descriptions for watched words, style
+- Fix menu panel padding on non-safe-area contexts
+- Disables composer auto focus on drawer
+- Some very minor WCAG scheme fixes
+- Fix chat separator alignment
+- Disable arrow up to edit if last message is not editable
+- Update Install Popular items and links
+- Adjust menu panels on iOS
+- Change JPEG to JPG for search consistency
+- Improve menu panel height fallback for older browsers
+- Improve safe-mode copy
+- Avoid overflow clipping descenders
+- Some admin theme list style adjustments
+- Improves site setting description for `discourse_connect_url`
+- Position of group user table dropdown, border
+- Tweak last-visit/date separators
+- Fix chat-reply overflow
+- Ensure header logo has dimensions, style clean-up
+- Fix width for top embedded reply, post notice
+- Style improvements to new user tables
+- Remove visual chat msg staging effect
+- Remove old group directory template, CSS
+- Makes last visit stand out less
+- Fix banner overlapping issue at breakpoint of around 1260px width
+- Update user chat preference link for new nav
+- Switch My Posts link in sidebar to My Drafts when drafts are present
+- Skip applying link-type watched words to user custom fields
+- Update badge icons
+- Fix large onebox avatars in img chat messages
+- Fix tag & category clicks on mobile topic list
+- Only allow scroll grab if nav is scrollable
+- User badges tweaks
+- Restore wider search dropdown width
+- Highlight vars updates
+- Release new user profile navigation for sidebar compatibility
+- Apply skeleton animation on content only
+- Add h1 tag to user page
+- Badge page styling update
+- Remove fixed width from buttons
+- Hide hamburger dropdown when `enable_sidebar` query param is used
+- Contains overscroll in channels list
+- Move vertical admin plugin nav to horizontal overflow nav
+- Prevents scroll in chat to propagate to parents
+- Userstatus limit handling in UI
+- Catch edge cases in tooltip
+- Update chat draft icon colour
+- Style edits
+- Fix remove-user-from-pm hover styling
+- Add transparent border for header icon
+- Hide chat button on user card when suspended
+- Warn about consequences of group deletion
+- Allow sidebar to appear inline down to 768px
+- Fix confusing error message
+- Add missing backtick to string
+- Add flex alignment for form actions
+- Easily toggle badges in admin badge list
+- Improve layout of keyboard shortcut modal
+- Fix `timeline-handle` positioning
+- Implements a random and auto generated skeleton
+- Allows drawer to take most of height space
+- Allow tags to wrap under categories on mobile
+- Orders public channels by slug instead of title
+- Show full topic title for reply-where
+- Apply same style for highlight mention span
+- Move data export to preferences page for new user nav
+- Add transition to glimmer-topic-timeline fullscreen view
+- Add timezone aliases for `IST`, `KST` and `JST`
+- Calculate missing hover/selected colors from existing colors
+- Flex horizontal form controls
+- Remove chat-specific font declaration
+- Brings back URL on chat icon when in full page
+- Improve emoji alignment for text
+- Highlight var refactor
+- Add staff action log text for permanently_delete_post_revisions
+- Remove extra whitespace in search helper
+- Prevent user card status overflow
+- Improve bulk button layout and alignment
+- Fixes and adjustments for user nav
+- Set penalty history to sticky
+- Hide date in timeline when wrapping
+- Remove left margin
+- Add margin to search keyword
+- Switch categories-boxes layouts from flexbox to grid
+- Prevent search context btn text from wrapping
+- Add missing space and other minor search adjustments
+- Reorders chat-channel fields
+- Restyle quote/share popup, fix hover jitter
+- Refactor alignment of tag icon in Discourse onebox
+- Fix alignment issues with autocomplete
+- Streamline avatar in topic list
+
+### Security Changes
+
+- Prevent dismissal of topics that user can't see
+- Use canonical url for topic embeddings
+- Limit ThemeField value length to prevent DoS
+- Set max-height property for iframes
+- Do not overwrite permissions on the General category
+- Encode embed url
+- Ensure site setting being updated is a configurable site setting
+- Strip `xlink:href` from uploaded SVGs
+- Update URI gem to 0.12.1 to address CVE-2023-28755
+- Limit URL length for theme remote
+- Add FinalDestination::FastImage that's SSRF safe
+- XSS on chat excerpts
+- SSRF protection bypass with IPv4-mapped IPv6 addresses
+- Monkey-patch web-push gem to use safer HTTP client
+- Fix XSS in full name composer reply
+- Rate limit the creation of backups
+- Bump Rails to v7.0.4.3
+- Show only visible tags in metadata
+- Hide PM count for tags by default
+- Prevent XSS in local oneboxes
+- Update to exclude tag topic filter
+- Only show restricted tag lists to authorized users
+- Prevent ReDoS in user agent parsing
+- Prevent ReDOS by making the SSH url regex unambiguous
+- Remove bypass for base_url
+- Limit the character count of group membership requests
+- Limit the length of drafts
+- Limit chat drafts length and preloaded count
+- Bump Rails to v7.0.4.1
+- Default tags to show count of topics in unrestricted categories
+
+### Performance
+
+- Paginate loading of tags in edit nav menu tags modal
+- Fixes multiple N+1 while loading threads
+- Limit anonymization to 1 per cluster
+- Increase performance of large csv exports for User Histories
+- Improve `findAllMatches` speed
+- Drop throttling from resize node
+- Improve workbox loading strategy
+- Cache ToS and Privacy Policy paths
+- Avoids eager pluck in posts controller
+- Prevents eager pluck in post alerter
+- Avoid rendering a component that isn't required most of the time
+- Preload user information when visiting user messages routes
+- Client side triggering multiple requests when opening composer
+- Sends publish_new_channel only when not followed
+- Creating a post would cause an N+1
+- Strict loading for SidebarSection queries
+- Avoid triggering TopicTrackingState change callbacks unnecessarily
+- Remove unnecessary queries from Theme#set_field
+- Don't serialize value for theme_fields unnecessarily
+- Avoid full `posts` table scans during anonymisation
+- Memoize element references for `dockCheck`
+- Fix N+1 queries problem when listing topics list
+- Use `OpenSSL::KDF` for Pbkdf2 implementation
+- Set default global regex timeout to 2 seconds
+- Optimise serialization for topic tracking state
+- Ensure sidebar section link index is correctly ordered
+- Optimize topic query for many categories
+- Use native postgres upsert for ApplicationRequest
+- Remove request for PM topic tracking state initiated from sidebar
+- Various perf improvements of chat-live-pane
+- Reduce height of the load more past message area
+- Applies optimisations on chat-live pane
+- Skip metadata routes for mini_profiler
+- Eager load linkables when loading custom sidebar sections
+- Add index to speed up ReindexSearch job
+- Refactor slide-in menu sizing for improved performance
+- Remove ember-link-component-extension to enable Glimmer LinkTo
+- Remove custom Sidebar::SectionLinkTo implementation
+- Move user-tips and narrative to per-user messagebus channels
+- N+1 queries on `/tags` with multiple categories tags
+- Don't parse posts for mentions when user status is disabled
+- N+1 queries when viewing tags
+
+### Accessibility
+
+- Don't output `aria-labelledby` when card is empty
+- Adjust contrast and font size for mini profiler widget
+- Adjust contrast for the Dark and Solarized Dark tertiary color schemes
+- Improve select-kit accessibility (take 2)
+- Improve select-kit accessibility
+- Select kit close on focus out
+- Use correct structure for badge headings
+- Increase contrast of elements in wcag scheme
+- Usernames aren't a meaningful heading
+- Allow header logo/title to hide, if needed
+- Header icons should be buttons, not links
+- Add aria-label to header notification counts
+- Share label needs corresponding ID on input
+- Add aria-label to embedded jump link
+- Aria-label for the post edit history button
+- Add aria tags for topic map expansion
+- History modal mode toggles need aria-labels
+- Embedded posts need disclosure widget attributes
+- Post avatars should not be tabbable
+- Add accessible label for bookmark name input
+- Discourse-tags should have a role and label
+- Add aria-labels for flagging textareas
+- Remove heading tags from user profile
+- Add secondary skip link to user profiles
+- More descriptive user page titles
+- Add aria tags to the new user nav
