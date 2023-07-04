@@ -1,4 +1,5 @@
-rake "release_note:generate[17daf07,HEAD]"
+rake "release_note:generate[17daf07,HEAD]" 
+Tue, 4 July
 ### New Features
 
 - Allow user to override watched_precedence_over_muted setting
