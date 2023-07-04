@@ -27,6 +27,8 @@
 - Add deslect all and reset to defaults btn edit nav menu modal
 - Add input filter for editing tags in navigation menu modal
 - Add modal for editing tags in navigation menu
+- Add dropdown to filter by selected in edit nav menu modal
+
 
 #### Misc but important
 - Allow site owners to disable impersonation
@@ -44,7 +46,6 @@
 - Show first notification tip to all users
 - Add hooks for email poller plugins
 - Display commit hash for each plugin on `/admin/plugins` page
-- Add dropdown to filter by selected in edit nav menu modal
 - Split navigation preference for count and behavior of sidebar links
 - Add db:resize:notification_id task for growing table
 - Export chat messages to CSV file
