@@ -1,60 +1,71 @@
 ### Features that can be highlighted
 
+#### Threads
+- Allows to enable/disable threading in UI
+- Sort thread list by unread threads first
+- Allow users to manually track threads without replying
+- Thread indicator improvements and participants
+- Chat thread header indicator improvements
+- Improving thread list item and header
+- Initial chat thread indicator and disabling echo mode in channels
 
 
+#### Image Grid
+- Enable image grid by default
+- Image grid in posts (experimental)
 
 
+#### Offline Indicator
+- Offline indicator
 
+#### hashtag autocomplete system
+- Use new hashtag autocomplete system on all sites
+- Apply hashtag styles to autocomplete
+
+
+#### Personalization
+- Add deslect all and reset to defaults btn edit nav menu modal
+- Add input filter for editing tags in navigation menu modal
+- Add modal for editing tags in navigation menu
+
+#### Misc but important
+- Allow site owners to disable impersonation
 
 
 ### New Features (all)
 
 - Allow user to override watched_precedence_over_muted setting
 - Use rich user status tooltip everywhere
-- Allows to enable/disable threading in UI
 - Track last_viewed_at datetime for channel members
 - Show available interpolation keys when overriding translations
-- Sort thread list by unread threads first
 - Conditionally change back button route for thread
 - New watched_precedence_over_muted setting
 - Try to load plugin gems platform variants
 - Show first notification tip to all users
 - Add hooks for email poller plugins
-- Display commit hash for each plugin on `/admin/plugins` page.
+- Display commit hash for each plugin on `/admin/plugins` page
 - Add dropdown to filter by selected in edit nav menu modal
 - Split navigation preference for count and behavior of sidebar links
 - Add db:resize:notification_id task for growing table
 - Export chat messages to CSV file
-- Add deslect all and reset to defaults btn edit nav menu modal
-- Add input filter for editing tags in navigation menu modal
-- Add modal for editing tags in navigation menu
 - Scroll to first message when clicking date in chat
-- Enable image grid by default
-- Allow users to manually track threads without replying
-- Thread indicator improvements and participants
 - Implement max_tags_per_email_subject
-- Custom content summarization strategies.
+- Custom content summarization strategies
 - Dynamic chunk size with uppy
 - Add new site setting type for tag-group lists
 - Add Mailpace webhook
 - Support sub-subcategories in new edit sidebar categories modal
-- Image grid in posts (experimental)
-- Use new hashtag autocomplete system on all sites
 - New dismiss button for combined new and unread view
 - Allow S3 ACLs to be disabled
-- Offline indicator
 - Add API Scope for latest posts
 - API Scope for latest.rss feed
 - Allow expanding hidden posts for groups in SiteSetting.can_see_hidden_post
 - Serve RTL versions of admin and plugins CSS bundles for RTL locales
 - Reduce avatar sizes to 6 from 20
-- Display PM participant group names in the topics list.
-- Chat thread header indicator improvements
-- Improving thread list item and header
+- Display PM participant group names in the topics list
 - Modal for admins to edit Community section
 - Support for chronologically merging posts into existing topic
 - Initial chat thread unread indicators
-- Apply hashtag styles to autocomplete
 - Create legal topics for set company name
 - Add support for AVIF images
 - Add user status to inline mentions in chat
@@ -85,7 +96,6 @@
 - Add a setting to allowlist DiscourseConnect return path domains
 - Reacting to MessageBus in chat thread panel
 - Add an emoji deny list site setting
-- Initial chat thread indicator and disabling echo mode in channels
 - Increase pbkdf2 iterations to 600k
 - Persist password hashing algorithm/params in database
 - Add category name in articleSection meta tag for schema.
@@ -99,7 +109,6 @@
 - Ability to bulk_remove users from a group
 - Modifier API for plugins
 - Move bootstrap mode indicator to header
-- Allow site owners to disable impersonation
 - Mark all chat channels read with a shortcut
 - Auto-remove users without permission from channel
 - Log manual bounce reset
