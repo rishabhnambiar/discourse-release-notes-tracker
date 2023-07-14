@@ -186,3 +186,16 @@ Stuff that’s highly technical, or only visible to developers / admins, tends t
 - Add basic instrumentation to defer queue
 - Show more context in Discourse topic oneboxes
 - Allow group owners promote more owners
+
+
+#### Cool Features from latest july 14 dump
+
+- Enable_public_channels site setting
+- New Discourse Lightbox using Glimmer
+- Inline topic summary. Cached version accessible to everyone.(is this AI?)
+- Show tooltip for bootstrap mode
+- Warn about outdated translation overrides in admin dashboard
+- Basic support for threads.net onebox
+- Enable loading slider by default
+- New jump to channel menu
+- Introduce 'loading slider' for page navigations
