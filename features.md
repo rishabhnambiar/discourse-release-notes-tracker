@@ -68,25 +68,26 @@
 - Allow editing channel slug
 - Allow changing slug on create channel
 - Add an emoji deny list site setting
+- Enable_public_channels site setting
 
 #### Do even more with TL4 
 - Setting which allows TL4 users to deleted posts
 - Allow TL4 users to see unlisted topics
 
-#### Misc but important?
+#### Improving life for Discourse admins
 - Allow site owners to disable impersonation
-- Offline indicator
 - Enable user tips by default
 - Add new notification for admin problems
-- Enable_public_channels site setting
-- New Discourse Lightbox using Glimmer
-- Inline topic summary. Cached version accessible to everyone.(is this AI?)
-- Show tooltip for bootstrap mode
 - Warn about outdated translation overrides in admin dashboard
-- Basic support for threads.net onebox
+
+#### Improving life for Discourse users
+- Offline indicator
 - Enable loading slider by default
-- New jump to channel menu
 - Introduce 'loading slider' for page navigations
+- New Discourse Lightbox using Glimmer
+- New jump to channel menu
+- Show tooltip for bootstrap mode
+- Basic support for threads.net onebox
 
 ### New Features (all)
 
@@ -172,3 +173,4 @@
 - Add basic instrumentation to defer queue
 - Show more context in Discourse topic oneboxes
 - Allow group owners promote more owners
+- Inline topic summary. Cached version accessible to everyone.
