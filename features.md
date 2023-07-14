@@ -1,5 +1,4 @@
-### Features that can be highlighted
-
+# Major
 #### Threads
 - Allows to enable/disable threading in UI
 - Sort thread list by unread threads first
@@ -20,41 +19,6 @@
 - Chat-replying indicator for threads
 - Initial chat thread unread indicators
 
-#### Image Grid
-- Enable image grid by default
-- Image grid in posts (experimental)
-
-#### hashtag autocomplete system
-- Use new hashtag autocomplete system on all sites
-- Apply hashtag styles to autocomplete
-- Add CSS class generation for category colors and hashtags
-
-#### Personalization
-- Add deslect all and reset to defaults btn edit nav menu modal
-- Add input filter for editing tags in navigation menu modal
-- Add modal for editing tags in navigation menu
-- Add dropdown to filter by selected in edit nav menu modal
-- Split navigation preference for count and behavior of sidebar links
-- Modal for admins to edit Community section
-- Public custom sidebar sections visible to anonymous
-- Ability to reorder links in custom sidebar sections
-- Allow external links in custom sidebar sections
-- Add rake task to mark old hashtag format for rebake
-
-### Search?
-- Allow searching for oldest topics
-- Fuzzy search in site settings and raise limit to 100 matches
-- Search_rank_sort_priorities modifier
-- Experimental API for custom full-page search types.
-- Roll out new search optimisations
-- Add `in:polls` filter to search
-- Add api scope for search endpoint
-- Rate limit anon searches per second
-- Hidden site setting to disable search prefix matching
-- Allow restricting duplication in search index
-- Prioritize_exact_search_title_match hidden setting
-- Use similarity in user search
-
 #### Chat Progress
 - Export chat messages to CSV file
 - Scroll to first message when clicking date in chat
@@ -70,9 +34,16 @@
 - Add an emoji deny list site setting
 - Enable_public_channels site setting
 
-#### Do even more with TL4 
-- Setting which allows TL4 users to deleted posts
-- Allow TL4 users to see unlisted topics
+#### Personalization
+- Add deslect all and reset to defaults btn edit nav menu modal
+- Add input filter for editing tags in navigation menu modal
+- Add modal for editing tags in navigation menu
+- Add dropdown to filter by selected in edit nav menu modal
+- Split navigation preference for count and behavior of sidebar links
+- Modal for admins to edit Community section
+- Public custom sidebar sections visible to anonymous
+- Ability to reorder links in custom sidebar sections
+- Allow external links in custom sidebar sections
 
 #### Improving life for Discourse admins
 - Allow site owners to disable impersonation
@@ -88,6 +59,39 @@
 - New jump to channel menu
 - Show tooltip for bootstrap mode
 - Basic support for threads.net onebox
+
+#### Image Grid
+- Enable image grid by default
+- Image grid in posts (experimental)
+
+# Minor
+#### 1. Do even more with TL4!
+- Setting which allows TL4 users to deleted posts
+- Allow TL4 users to see unlisted topics
+
+#### 2. Hashtag autocomplete system
+- Use new hashtag autocomplete system on all sites
+- Apply hashtag styles to autocomplete
+- Add CSS class generation for category colors and hashtags
+- Add rake task to mark old hashtag format for rebake
+
+### 3. Search Improvements
+- Allow searching for oldest topics
+- Fuzzy search in site settings and raise limit to 100 matches
+- Search_rank_sort_priorities modifier
+- Experimental API for custom full-page search types.
+- Roll out new search optimisations
+- Add `in:polls` filter to search
+- Add api scope for search endpoint
+- Rate limit anon searches per second
+- Hidden site setting to disable search prefix matching
+- Allow restricting duplication in search index
+- Prioritize_exact_search_title_match hidden setting
+- Use similarity in user search
+
+### 4. TBD
+
+### 5. TBD
 
 ### New Features (all)
 
