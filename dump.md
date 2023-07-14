@@ -2,6 +2,19 @@ rake "release_note:generate[17daf07,HEAD]"
 Tue, 4 July
 ### New Features
 
+- Let users collapse the topic inline summary
+- Extend the topics:read API scope to allow read by external_id
+- Enable_public_channels site setting
+- New Discourse Lightbox using Glimmer
+- Inline topic summary. Cached version accessible to everyone.
+- Show tooltip for bootstrap mode
+- Warn about outdated translation overrides in admin dashboard
+- Separated 'trusted users can edit others' setting for trust level 3 & 4
+- Add default site settings to control the defaults of navigation menu preferences
+- Basic support for threads.net onebox
+- Enable loading slider by default
+- New jump to channel menu
+- Introduce 'loading slider' for page navigations
 - Allow user to override watched_precedence_over_muted setting
 - Use rich user status tooltip everywhere
 - Allows to enable/disable threading in UI
@@ -150,6 +163,51 @@ Tue, 4 July
 
 ### Bug Fixes
 
+- Add the required widget for admin-problems notification item
+- Ensures lightbox sends valid color to react-native
+- Simplify channel threads lookup for pagination
+- Only use lastViewedTopic when going 'back' to a topic list
+- Add tracked property for items in lightbox carousel
+- Show only context menu on img long press
+- Dismissing unread posts did not publish changes to other clients
+- Prevent default event on touchend reaction
+- S/--border-radius-large)/--d-border-radius-large
+- Prevents user to restore message deleted by staff
+- Order tags shown in email subject by topics count and name
+- Render excerpt HTML for chat replies and edit
+- More performance improvement for PostAlert job
+- Display the whole summary when it consists of multiple `<p>` tags.
+- Correctly respects full name settings in channel title
+- Always clear caches after committing the current transaction
+- Chat thread race condition issues
+- Conditionally hide `Add Alternate Email` button based on site setting
+- Default parameter recipients to create new message via params must be a string
+- Update remaining backup code count after creation
+- Ensure dialogs are still rendered if triggered during boot
+- Makes chat user avatar show presence by default
+- Typo in property name
+- Don't use etags for post-upload verification
+- Show preview of Arial/System font in wizard
+- Track thread in UI when user sends first message
+- Can't dismiss new topics for experimental new new view
+- Don't redirect when manually adding 2fa
+- Correctly makes dm creator to follow channel
+- Set test transaction to before_all transaction
+- Do not attempt to focus topic-list-item after destroy
+- Removes discourse-teams-sidebar support
+- Limits legacy sidebar height
+- Add missing chat translations
+- Mark threads read when threading enabled for a channel
+- Show replies count on thread indicator regardless of participants
+- Avoid transitioning when a chat thread component is destroyed
+- Post alerter notification when topic directly watched
+- Better handling of deleted thread original messages
+- Prevent field name conflicts when using the `groups_for_users_search` modifier
+- More consistent composer focus and replying indicator
+- Do not filter on category name
+- Correctly show unread and presence
+- Error when loading a channel with threading enabled but no threads
+- Mobile share canonical URL
 - Minor Twitter onebox improvements
 - Correctly intercept ``<a href target="_self"`
 - Allow to use `%h%m%s` for youtube `t` param
@@ -694,6 +752,22 @@ Tue, 4 July
 
 ### UX Changes
 
+- Move group mentions notifications into the reply tab
+- Fix icon warning position in sidebar modal
+- More border-radius removal from chat
+- Z-index for for tippy box in chat
+- Improve user tips
+- Double scroll fix for keyboard shortcuts modal
+- Remove section heading for community section
+- Lower border radius for channel cards
+- Fix margin for group label
+- Indicate main sidebar section is always public
+- Change z-index of thread resizer to be below emoji popup
+- Message creator spacing and sizing on mobile + fix text wrapping
+- Do not show presence in message creator selection
+- Clarify "disable tags/category notification" settings
+- Adjust sidebar modal styles, consolidate css
+- Improve position of modal close button
 - Thread indicator small fixes
 - Visual indicator for reorder sidebar links mode
 - Make template fields fill the container width
@@ -948,6 +1022,9 @@ Tue, 4 July
 
 ### Security Changes
 
+- Limit amount of links in custom sidebar section
+- Don't reuse CSP nonce between requests
+- Ensure topic is valid before updating category
 - Prevent dismissal of topics that user can't see
 - Use canonical url for topic embeddings
 - Limit ThemeField value length to prevent DoS
