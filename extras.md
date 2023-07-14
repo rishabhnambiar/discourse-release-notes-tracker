@@ -1,0 +1,85 @@
+[details=commits that were not added anywhere above, but can be if needed]
+- Allow user to override watched_precedence_over_muted setting
+- Use rich user status tooltip everywhere
+- Show available interpolation keys when overriding translations
+- New watched_precedence_over_muted setting
+- Try to load plugin gems platform variants
+- Show first notification tip to all users
+- Add hooks for email poller plugins
+- Display commit hash for each plugin on `/admin/plugins` page
+- Add db:resize:notification_id task for growing table
+- Implement max_tags_per_email_subject
+- Custom content summarization strategies
+- Dynamic chunk size with uppy
+- Add new site setting type for tag-group lists
+- Add Mailpace webhook
+- Support sub-subcategories in new edit sidebar categories modal
+- New dismiss button for combined new and unread view
+- Allow S3 ACLs to be disabled
+- Add API Scope for latest posts
+- API Scope for latest.rss feed
+- Allow expanding hidden posts for groups in SiteSetting.can_see_hidden_post
+- Serve RTL versions of admin and plugins CSS bundles for RTL locales
+- Reduce avatar sizes to 6 from 20
+- Display PM participant group names in the topics list
+- Support for chronologically merging posts into existing topic
+- Create legal topics for set company name
+- Add support for AVIF images
+- Show user cards for inactive users
+- Default to subcategory when parent category does not allow posting
+- Allow for longer membership domains
+- Offline indicator controlled by message-bus connectivity (#21324)"
+- Offline indicator controlled by message-bus connectivity
+- Reimplement offline indicator 
+- Service to track message bus connectivity + offline indicator(#21259)
+- Add support for figure and figcaption tags in embeddings
+- Add support for user badge revocation webhook events
+- Allow admins to delete reviewables via API
+- Add new don't feed the trolls feature
+- Allow drafts to be deleted via the API
+- Detect current git "branch" even when a tag is checked out
+- Add a setting to allowlist DiscourseConnect return path domains
+- Increase pbkdf2 iterations to 600k
+- Persist password hashing algorithm/params in database
+- Add category name in articleSection meta tag for schema.
+- SiteSetting for creation of small action on tag change
+- Allow invite only and Discourse connect
+- SiteSetting to default user path to different routes
+- Use "Comment" schema type for post replies.
+- Ability to bulk_remove users from a group
+- Modifier API for plugins
+- Move bootstrap mode indicator to header
+- Log manual bounce reset
+- Hook for suggested topic customization
+- Only list watching group messages in messages notifications panel
+- Configurable auto-bump cooldown
+- Tooltip for disabled new topic button
+- Add new tags from edit tag synonyms page
+- Log to STDOUT using Rails 5 env var
+- Update topic/comment embedding parameters
+- Add API scope for listing topics in a category
+- Adding some more api scopes
+- Add API scopes for group endpoints
+- Add word count and indicator when exceeded max
+- Use feature detection for showing push notification in iOS
+- Add shortcut to insert current time in composer
+- Create SQL-only backup if there are no uploads
+- Support collapsing array sections in JSON Schema field types
+- Allow embedded view to include a header
+- Allow DTooltip interaction
+- Enable service worker for Apple devices
+- Move metadata user results to list bottom
+- Add separate api scope for topic status
+- Add api scope for suspending users
+- Add api scope for create invite endpoint
+- Add better TikTok onebox support
+- Allow admins to permanently delete revisions
+- Introduce pg_force_readonly_mode GlobalSetting
+- Verify email webhook signatures
+- Extend topic update API scope to allow status updates
+- Raise redirect avatar cache to 1 day
+- Add basic instrumentation to defer queue
+- Show more context in Discourse topic oneboxes
+- Allow group owners promote more owners
+- Inline topic summary. Cached version accessible to everyone.
+[/details]
