@@ -1,5 +1,5 @@
-rake "release_note:generate[17daf07,HEAD]" 
-Tue, 4 July
+rake "release_note:generate[17daf07,HEAD]" latest diff 14 July
+
 ### New Features
 
 - Let users collapse the topic inline summary
