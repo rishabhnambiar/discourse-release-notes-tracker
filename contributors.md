@@ -1,4 +1,4 @@
-### Thu, 20 Jul discourse-github-stats % ./stats.rb --start-tag v3.0.0 
+### Thu, 20 Jul [discourse-github-stats](https://github.com/gschlager/discourse-github-stats) % ./stats.rb --start-tag v3.0.0  
 
 Contributors (96):
 326 [jjaffeux](https://github.com/jjaffeux)
