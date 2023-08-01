@@ -1,7 +1,21 @@
-rake "release_note:generate[17daf07,HEAD]" latest diff 14 July
+rake "release_note:generate[17daf07,HEAD]"
 
 ### New Features
 
+- Count only approved flagged posts in user pages
+- Remove restrictions from the chat messages export
+- JSON editor for theme settings
+- Thread pagination
+- API to set combined/separated sidebar mode.
+- Implement SiteSetting to Allow Anonymous Likes
+- Regenerate outdated summaries.
+- Ability to position switch panel buttons
+- Allow sidebar section api to create external links
+- New API to add panels to sidebar
+- Add limit and group exclusion to the directory items endpoint
+- Add admin dashboard warning for `legacy` navigation menu
+- Allow custom summaries for TL3 by default
+- Show unread in sidebar for unread channel threads
 - Let users collapse the topic inline summary
 - Extend the topics:read API scope to allow read by external_id
 - Enable_public_channels site setting
@@ -163,6 +177,72 @@ rake "release_note:generate[17daf07,HEAD]" latest diff 14 July
 
 ### Bug Fixes
 
+- Validate page/limit params for directory, user-badges and groups
+- Ensure presence channels 'leave' correctly when the tab is backgrounded
+- Can't dismiss unread posts in topics of a sub-subcategory
+- Chat translation minor issues
+- When using arrow to bottom fetch from newest
+- Breaking typo, missing closing parenthesis in topic-post.scss
+- Missing pending queued posts from topic view
+- Hydration of embedded records
+- Internal oneboxes with github links
+- Tweak right arrow position; set other arrow placements to default
+- Member Highlights on Group Cards
+- Reset scrollbar position for mobile on lightbox images
+- Can't dismiss new topics that belong to a sub-sub category
+- Fix flaky test from settings editor PR (discouse:main:80f5018)
+- Toggling overridden settings broke in #21572
+- Share topic shortcut (shift+s)
+- Move main sidebar panel name to constant
+- Seed all categories and tags configured as defaults for nav menu
+- Flashing history modal when changing versions
+- Remove unnecessary ellipsis
+- Chat emoji picker focus offset
+- Attempt to fix multi sessions reaction spec
+- Distinguish between scroll and drag for sidebar
+- Update "Embed Motoko" Onebox URLs
+- Looping attempt to reconnect in network connectivity service
+- Disable the previous revision button if it is the last revision
+- Handle empty directory columns in /u route
+- Fast-edit shortcuts got lost in bdd97ff
+- Prevent lightbox from loading onebox embed icons in chat uploads
+- Make document overflow hidden on both axis when lightbox is open
+- Managing sidebar custom sections not working on subfolder
+- Loading more tags in edit nav menu tags modal not working
+- Use base 10 when gettings allowed group IDs from settings.
+- Restore the unconditional yield in d-button
+- Correct router service call from some admin controllers
+- Render user profile trust level name for TL0
+- Capture click target in lightbox click handler
+- Inline deprecated settings in migration file
+- Wrong collapsible parameter in sidebar API
+- `user_id` arg override in Slack import
+- Ensure 'modern' modal is closed when opening legacy modal
+- Banners not removing when unset
+- Staff action log could not be accessed via link
+- Show mention count for channel list on mobile
+- Specify chrome version
+- Hashtag error in PrettyText when processing email
+- Termless hashtag search when a type is disabled
+- Doubled up or not tracked threads in thread list
+- Embedding checkbox bug
+- Update `last_read_message_id` when moving chat messages
+- Keep ReviewableQueuedPosts even with user delete reviewable actions
+- Do not track first AJAX request as a pageview
+- Check if dominant color is set before updating site theme color
+- Chat errors for thread subscriptions
+- Sometimes stuck of sidebar reorder
+- In modal should check for body
+- Allows to resize panels on tablets
+- Allows to focus thread's composer on ipad
+- Bind selector to event listener callback for lightbox
+- Editing tags in sidebar should show all tags visible to user
+- Close modal after moving message to channel
+- Incorrect selector in system specs
+- Don't show admin warnings about deleted translation overrides
+- Redirects to browse after removing last followed
+- Created_at datetime format inconsistencies in chat
+- Lightbox setup blocked due to waiting for first image load
 - Add the required widget for admin-problems notification item
 - Ensures lightbox sends valid color to react-native
 - Simplify channel threads lookup for pagination
@@ -752,6 +832,33 @@ rake "release_note:generate[17daf07,HEAD]" latest diff 14 July
 
 ### UX Changes
 
+- Use full width when displaying a single recommendations list.
+- Fix long image titles in experimental lightbox
+- Topic recommendations tweaks.
+- Move Admin Guide link to URL
+- Clarify 'disable tag/category edit notifications' site settings
+- Fix alignment extra buttons in post controls
+- Increase experimental lightbox z-index
+- Refactor AI summarizing animation
+- Allow composer title to shrink when needed
+- More tweaks to compact tag picker
+- Different way of centering chat notice to accommodate longer texts
+- Responsive oneboxing with images in chat
+- Minor alignment fix for compact tag selector
+- Minor change to compact tag chooser
+- Remove ring from avatar for a new user
+- Compact option for multi-selects
+- Hide header in dismiss modal
+- Fix bookmark modal footer layout
+- Category hashtag colors order fix
+- Display tag's description as title in navigation menu
+- Show the info icon outside the tooltip
+- Disclose AI model used and add animation to placeholder
+- Fix focus state style for date button in composer
+- Point that topic summaries are generated by an AI
+- Firefox fix for shorthand modal width
+- Size down unread indicators fror drawer/mobile
+- Disable summarize button while generating summary
 - Move group mentions notifications into the reply tab
 - Fix icon warning position in sidebar modal
 - More border-radius removal from chat
@@ -1022,6 +1129,12 @@ rake "release_note:generate[17daf07,HEAD]" latest diff 14 July
 
 ### Security Changes
 
+- Don't allow a particular site to monopolize the defer queue
+- Hide restricted tags in noscript view
+- Limit length of edit reason column
+- Handle concurrent invite accepts
+- Impose a upper bound on limit params in various controllers
+- Don't reuse CSP nonce between anonymous requests
 - Limit amount of links in custom sidebar section
 - Don't reuse CSP nonce between requests
 - Ensure topic is valid before updating category
@@ -1058,6 +1171,9 @@ rake "release_note:generate[17daf07,HEAD]" latest diff 14 July
 
 ### Performance
 
+- Optimise `TopicTrackingState.report` query to speed up query
+- Add exponential backoff for `/presence/update` errors
+- Add index on topic_id and created_at to posts table
 - Paginate loading of tags in edit nav menu tags modal
 - Fixes multiple N+1 while loading threads
 - Limit anonymization to 1 per cluster
